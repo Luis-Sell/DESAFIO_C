@@ -13,29 +13,22 @@
     "npm run dev"
 ______________________________________
 
-    Endpoints disponíveis
+ Endpoints disponíveis
 
-    POST /insert-tasks (Cadastra uma ou mais tarefas)
+ POST /insert-tasks (Cadastra uma ou mais tarefas)
 
-    *Cada tarefa deve conter os seguintes campos
-    -> description | -> responsable | -> status *
+ Cada tarefa deve conter os seguintes campos:*  
+→ `description` | `responsable` | `status`  
+O campo `id` será gerado automaticamente pelo servidor.
 
-    O campo id será gerado automaticamente pelo servidor
+Exemplo com curl:
 
-    Exemplo com curl:
-    curl -X POST http://localhost:8085/insert-tasks \
+```bash
+curl -X POST http://localhost:8085/insert-tasks \
 -H "Content-Type: application/json" \
--d '[
-  {
-    "description": "Criar Login",
-    "responsable": "bruno",
-    "status": "done"
-  },
-  {
-    "description": "Criar Menu",
-    "responsable": "bruno",
-    "status": "doing"
-  }
+-d '[ 
+  { "description": "Criar Login", "responsable": "bruno", "status": "done" },
+  { "description": "Criar Menu", "responsable": "bruno", "status": "doing" }
 ]'
 
 - - - - - - - - - - - - - - - - - - - - 
